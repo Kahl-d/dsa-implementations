@@ -1,0 +1,20 @@
+def minimum_boxes(meals, capacity):
+	
+    total = 0 
+    for meal in meals: 
+		total+=meal
+        
+	cap = sorted(capacity, reverse=True)
+    
+	count = 0
+
+	for size in cap:
+		total -= size
+		count +=1
+		if size <= 0:
+			return count
+
+
+	return False
+            
+    
